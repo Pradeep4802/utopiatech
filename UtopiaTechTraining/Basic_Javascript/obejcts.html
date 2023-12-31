@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object In Js</title>
+</head>
+
+<body>
+
+    <script>
+        let num1 = 45;
+        let str1 = "My name is pradeep";
+        let lang = "Javascript";
+
+        // console.log(lang);
+
+        const obj1 = {
+            name: "Pradeep",
+            age: 21,
+            email: "pradeep@example.com",
+            contact: "873737336636",
+            myfunc: ()=>{
+                return "Hey I am Using this system.";
+            },
+            myfunc1() {
+                return "This is me";
+            },
+            obj2: {
+                template : "HtmlForm",
+                vendor: "utopia",
+                obj3: {
+                    item: "Panel",
+                    quantity: 45,
+                    "Status": "Ok"
+                }
+            }
+        }
+
+        console.log(obj1.obj2.obj3.quantity);
+
+        function onCall() {
+            console.log("moye moye");
+        }
+
+        function myData(name,num) {
+            console.log(typeof name);
+            console.log(typeof num);
+            return {
+                area: "Airoli",
+                status: "ok",
+                code: 200
+            }
+        }
+
+        // console.log(typeof obj1.myfunc);
+        // console.log(typeof obj1.myfunc1);
+        // console.log(typeof onCall());
+        // console.log(myData(9876,"Pradeep"));
+        // console.log(myData(9876));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Input Attributes</title>
+</head>
+
+<body>
+
+    <input type="text" id="myInput" name="username" placeholder="Enter your username" class="input-field"
+        data-custom="custom-value">
+
+    <script>
+        // Get the input element
+        var inputElement = document.getElementById('myInput');
+
+        // Get all attributes
+        var attributes = inputElement.attributes;
+        console.log(attributes);
+
+        // Convert attributes to an array and log them
+        var attributesArray = Array.from(attributes);
+        attributesArray.forEach(function (attribute) {
+            console.log(attribute.name + ': ' + attribute.value);
+        });
+
+        // Creating a simple function that returns a Promise
+        function doSomethingAsync() {
+            return new Promise((resolve, reject) => {
+                // Simulating an asynchronous operation (e.g., fetching data, making an API call)
+                setTimeout(() => {
+                    const success = true; // Set to false to simulate a failure
+
+                    if (success) {
+                        resolve('Operation succeeded!');
+                    } else {
+                        reject('Operation failed!');
+                    }
+                }, 2000); // Simulating a delay of 2000 milliseconds (2 seconds)
+            });
+        }
+
+        // Using the Promise
+        doSomethingAsync()
+            .then((result) => {
+                console.log('Success:', result);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                console.log('Finally block, always executed.');
+            });
+
+    </script>
+
+</body>
+
+</html>
