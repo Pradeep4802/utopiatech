@@ -13,7 +13,7 @@ const getFacts = async () => {
 };
 
 // 2nd Way
-function getFacts() {
+function getFact() {
     fetch(URL).then((response) => {
         return response.json();
     }).then((data)=>{
